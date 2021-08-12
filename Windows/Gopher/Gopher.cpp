@@ -261,7 +261,8 @@ void Gopher::loop()
       }
       else
       {
-        ShowWindow(otk_win, SW_MINIMIZE);
+        // Close Window
+        PostMessage(otk_win, WM_CLOSE, 0, 0);
       }
     }
   }
