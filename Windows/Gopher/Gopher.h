@@ -79,6 +79,8 @@ private:
   DWORD GAMEPAD_Y = NULL;
   DWORD GAMEPAD_TRIGGER_LEFT = NULL;
   DWORD GAMEPAD_TRIGGER_RIGHT = NULL;
+  DWORD ON_ENABLE = NULL;
+  DWORD ON_DISABLE = NULL;
 
   // Button press state logic variables
   std::map<DWORD, bool> _xboxClickStateLastIteration;

@@ -129,11 +129,13 @@ void ConfigFile::ExtractKeys()
     outfile << "GAMEPAD_LEFT_SHOULDER = 0x11      # Ctrl" << std::endl;
     outfile << "GAMEPAD_RIGHT_SHOULDER = 0        # ---" << std::endl;
     outfile << "GAMEPAD_A = 0                     # ---" << std::endl;
-    outfile << "GAMEPAD_B = 0x0D                  # Enter" << std::endl;
+    outfile << "GAMEPAD_B = 0x08                  # Backspace" << std::endl;
     outfile << "GAMEPAD_X = 0                     # (Right Click)" << std::endl;
     outfile << "GAMEPAD_Y = 0                     # (OSK)" << std::endl;
     outfile << "GAMEPAD_TRIGGER_LEFT = 0x12       # Alt" << std::endl;
     outfile << "GAMEPAD_TRIGGER_RIGHT = 0x09      # Tab" << std::endl;
+    outfile << "ON_ENABLE = 0x86                  # F23 (Key to be pressed when disable is toggled)" << std::endl;
+    outfile << "ON_DISABLE = 0x87                 # F24 (Key to be pressed when disable is toggled)" << std::endl;
     outfile << "\n" << std::endl;
     outfile << "# ADVANCED CONFIGURATION SETTINGS" << std::endl;
     outfile << "#  ALLOWED CURSOR SPEEDS, FIRST WILL BE CHOSEN BY DEFAULT.  VALUES > 1.0 WILL BE IGNORED.  NO SPACES." << std::endl;
