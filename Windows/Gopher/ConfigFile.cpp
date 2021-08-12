@@ -146,6 +146,8 @@ void ConfigFile::ExtractKeys()
     outfile << "SCROLL_DEAD_ZONE = 5000 # Thumbstick dead zone to use for scroll wheel movement. Absolute maximum thumbstick value is 32768." << std::endl;
     outfile << "TRIGGER_DEAD_ZONE = 0 # Dead zone for the left and right triggers to detect a trigger press. Range from 0 (accept all input) to 255 (ignore all input)." << std::endl;
     outfile << "SCROLL_SPEED = 0.05 # Speed at which you scroll (scalar)" << std::endl;
+    outfile << "INIT_DISABLED = 1 # Start Gopher Disabled (1 for disabled, 0 for enabled)" << std::endl;
+
     // End config dump
 
     outfile.close();

@@ -113,10 +113,12 @@ void Gopher::loadConfigFile()
   GAMEPAD_Y = strtol(cfg.getValueOfKey<std::string>("GAMEPAD_Y").c_str(), 0, 0);
   GAMEPAD_TRIGGER_LEFT = strtol(cfg.getValueOfKey<std::string>("GAMEPAD_TRIGGER_LEFT").c_str(), 0, 0);
   GAMEPAD_TRIGGER_RIGHT = strtol(cfg.getValueOfKey<std::string>("GAMEPAD_TRIGGER_RIGHT").c_str(), 0, 0);
-
+  INIT_DISABLED = std::stoi(cfg.getValueOfKey<std::string>("INIT_DISABLED").c_str());
   //--------------------------------
   // Advanced settings
   //--------------------------------
+
+  _disabled = INIT_DISABLED;
 
   // Acceleration factor
   acceleration_factor = strtof(cfg.getValueOfKey<std::string>("ACCELERATION_FACTOR").c_str(), 0);
@@ -407,7 +409,6 @@ void Gopher::handleDisableButton()
       duration = 400;
       intensity = 65000;
     }
-
     pulseVibrate(duration, intensity, intensity);
   }
 }
