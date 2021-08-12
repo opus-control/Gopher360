@@ -122,7 +122,7 @@ void ConfigFile::ExtractKeys()
     outfile << "GAMEPAD_DPAD_DOWN = 0x28          # Down Arrow" << std::endl;
     outfile << "GAMEPAD_DPAD_LEFT = 0x25          # Left Arrow" << std::endl;
     outfile << "GAMEPAD_DPAD_RIGHT = 0x27         # Right Arrow" << std::endl;
-    outfile << "GAMEPAD_START = 0x5B              # Browser Refresh" << std::endl;
+    outfile << "GAMEPAD_START = 0                 # ---" << std::endl;
     outfile << "GAMEPAD_BACK = 0xA8               # Esc" << std::endl;
     outfile << "GAMEPAD_LEFT_THUMB = 0            # (Middle Mouse Click)" << std::endl;
     outfile << "GAMEPAD_RIGHT_THUMB = 0           # ---" << std::endl;
@@ -139,13 +139,13 @@ void ConfigFile::ExtractKeys()
     outfile << "#  ALLOWED CURSOR SPEEDS, FIRST WILL BE CHOSEN BY DEFAULT.  VALUES > 1.0 WILL BE IGNORED.  NO SPACES." << std::endl;
     outfile << "CURSOR_SPEED = ULTRALOW=0.010,LOW=0.020,MED=0.030,HIGH=0.040,ULTRAHIGH=0.050" << std::endl;
     outfile << "#  SET ACCELERATION FACTOR FOR NON-LINEAR CURSOR SPEED" << std::endl;
-    outfile << "# ACCELERATION_FACTOR = 3" << std::endl;
+    outfile << "#  ACCELERATION_FACTOR = 3" << std::endl;
     outfile << "#  Swaps the function of the thumbsticks. Set to 0 for default behavior or set to 1 to have the mouse movement on the right stick and scrolling on the left stick." << std::endl;
     outfile << "SWAP_THUMBSTICKS = 0" << std::endl;
     outfile << "DEAD_ZONE = 6000 # Thumbstick dead zone to use for mouse movement. Absolute maximum thumbstick value is 32768." << std::endl;
     outfile << "SCROLL_DEAD_ZONE = 5000 # Thumbstick dead zone to use for scroll wheel movement. Absolute maximum thumbstick value is 32768." << std::endl;
     outfile << "TRIGGER_DEAD_ZONE = 0 # Dead zone for the left and right triggers to detect a trigger press. Range from 0 (accept all input) to 255 (ignore all input)." << std::endl;
-    outfile << "SCROLL_SPEED = 0.1 # Speed at which you scroll (scalar)" << std::endl;
+    outfile << "SCROLL_SPEED = 0.05 # Speed at which you scroll (scalar)" << std::endl;
     // End config dump
 
     outfile.close();

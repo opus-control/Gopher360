@@ -248,7 +248,8 @@ void Gopher::loop()
       HWND otk_win = getOskWindow();
       if (otk_win == NULL)
       {
-        printf("Please start the On-screen keyboard first\n");
+        printf("Launching the On-Screen-Keyboard\n");
+        launchOsk();
       }
       else if(IsIconic(otk_win))
       {
@@ -800,6 +801,15 @@ HWND Gopher::getOskWindow()
   HWND ret = NULL;
   EnumWindows(EnumWindowsProc, (LPARAM)&ret);
   return ret;
+}
+
+// Description:
+//   Launches the On-Screen-Keyboard
+void Gopher::launchOsk()
+{
+    PVOID OldValue = NULL;
+    Wow64DisableWow64FsRedirection(&OldValue);
+    ShellExecute((HWND)NULL, L"open", L"osk.exe", NULL, NULL, SW_SHOWNORMAL);
 }
 
 // Description:

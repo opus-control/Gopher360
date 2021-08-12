@@ -128,6 +128,8 @@ public:
 
   HWND getOskWindow();
 
+  void launchOsk();
+
 private:
 
   bool erasePressedKey(WORD key);
